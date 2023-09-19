@@ -30,7 +30,7 @@ class Picnote_Plugin
     function enqueue_admin_scripts()
     {
         wp_enqueue_media();
-        wp_enqueue_script($this->plugin_name . 'admin-scripts', plugin_dir_path(dirname(__FILE__)) . 'js/picnote-admin.js', array('jquery', 'thickbox', 'media-upload'), $this->version, false);
+        wp_enqueue_script($this->plugin_name . '-admin-scripts', plugin_dir_url(__DIR__) . 'js/picnote-admin.js', array('jquery', 'thickbox', 'media-upload'), $this->version, false);
     }
 
     function picnote_admin_page_html()
